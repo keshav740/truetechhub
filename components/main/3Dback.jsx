@@ -49,6 +49,8 @@ const Background3D = () => {
           rotationX: Math.random() * 360,
           rotationY: Math.random() * 360,
           rotationZ: Math.random() * 360,
+          width: size,
+          height: size,
           repeat: -1,
           yoyo: true,
           ease: "power1.inOut",
@@ -66,6 +68,10 @@ const Background3D = () => {
           src={src}
           alt={`Image ${i}`}
           className="absolute object-cover rounded-lg shadow-lg"
+          style={{
+            width: `${Math.random() * 80 + 40}px`,
+            height: `${Math.random() * 80 + 40}px`,
+          }}
         />
       ))}
     </div>
