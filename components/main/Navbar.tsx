@@ -80,13 +80,13 @@ const Navbar = () => {
         <div className="flex flex-row gap-2 sm:gap-5">
           <Link
             className="text-pink-500"
-            href="https://www.instagram.com/stories/ysyworldwidetechnology/3189397138998492317/"
+            href="https://www.instagram.com/true_techhub?igsh=MXBuNmZ3aHdsMXQ4bw=="
           >
             <FaInstagram />
           </Link>
           <Link
             className="text-blue-700"
-            href="https://www.linkedin.com/feed/?trk=homepage-basic_sign-in-submit"
+            href="https://www.linkedin.com/in/true-tech-hub-959742319?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
             target="_blank"
           >
             <FaLinkedin />

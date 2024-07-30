@@ -26,7 +26,7 @@ const Footer = () => {
     window.location.href = "mailto:truetechhub@gmail.com";
   };
 
-  const phoneNumber = "7497876899";
+  const phoneNumber = "7505189143";
   const message = "Hello! I would like to chat with you.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     message
@@ -47,12 +47,12 @@ const Footer = () => {
                 className="cursor-pointer hover:animate-slowspin rounded-full"
               />
             </Link>
-            <p className="flex flex-row items-center my-[15px] cursor-pointer text-yellow-500">
+            {/* <p className="flex flex-row items-center my-[15px] cursor-pointer text-yellow-500">
               <FaLocationDot />
               <span className="text-[15px] ml-[6px] text-white">
               Nehru Place, Delhi India
               </span>
-            </p>
+            </p> */}
             <p className="flex flex-row items-center my-[15px] cursor-pointer text-yellow-500">
               <FaLocationDot />
               <span className="text-[15px] ml-[6px] text-white">
@@ -118,7 +118,7 @@ const Footer = () => {
             <p className="flex flex-row items-center my-[15px] cursor-pointer text-purple-500">
               <FaClock />
               <span className="text-[15px] ml-[6px] text-white">
-                Mon – Sat 10:00pm - 8:00pm
+                Mon – Sat 10:00am - 8:00pm
               </span>
             </p>
             <p className="flex flex-row items-center my-[15px] cursor-pointer text-purple-500">
@@ -134,7 +134,7 @@ const Footer = () => {
               </span>
             </p>
             <Link
-              href="https://www.instagram.com/stories/ysyworldwidetechnology/3189397138998492317/"
+              href="https://www.instagram.com/true_techhub?igsh=MXBuNmZ3aHdsMXQ4bw=="
               target="_blank"
             >
               <p className="flex flex-row items-center my-[15px] cursor-pointer text-pink-700">
@@ -145,7 +145,7 @@ const Footer = () => {
               </p>
             </Link>
             <Link
-              href="https://www.linkedin.com/feed/?trk=homepage-basic_sign-in-submit"
+              href="https://www.linkedin.com/in/true-tech-hub-959742319?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               target="_blank"
             >
               <p className="flex flex-row items-center my-[15px] cursor-pointer text-blue-700">
