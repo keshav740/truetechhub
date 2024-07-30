@@ -8,9 +8,9 @@ import { IoCall } from "react-icons/io5";
 
 const StickyIcon = () => {
   const handleIconClick = () => {
-    window.location.href = "mailto:Info@ysyworldwidetechnology.com"; // Replace 'your@email.com' with your email address
+    window.location.href = "mailto:truetechhub@gmail.com"; // Replace 'your@email.com' with your email address
   };
-  const phoneNumber = "7497876899"; // Replace with your WhatsApp number
+  const phoneNumber = "7505189143"; // Replace with your WhatsApp number
   const message = "Hello! I would like to chat with you.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     message
