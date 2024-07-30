@@ -10,7 +10,9 @@ import {
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import styles from "../../styles/Home.module.css";
+
 import Link from "next/link";
+
 
 const HeroContent = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -23,8 +25,6 @@ const HeroContent = () => {
     "Web Development",
     "UI/UX Design",
     "App Development",
-    "Compliance Services",
-    "ISO/ICV And Further Certifications",
     "Digital Product Strategy",
     "Brand Strategy",
   ];
@@ -68,6 +68,8 @@ const HeroContent = () => {
   }, [text, delta, isDeleting, loopNum]); // Add all relevant dependencies here
 
   return (
+    <>
+
     <motion.div
       initial="hidden"
       animate="visible"
@@ -139,6 +141,7 @@ const HeroContent = () => {
         </div>
       </motion.div>
     </motion.div>
+    </>
   );
 };
 
