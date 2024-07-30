@@ -6,6 +6,21 @@
     font-family: "Cedarville Cursive", cursive;
 }
 
+::selection {
+    background-color: #ea0ef1;
+    /* Customize the background color */
+    color: #ffffff;
+    /* Customize the text color */
+}
+
+
+/* For WebKit-based browsers */
+
+ ::-moz-selection {
+    background-color: #ea0ef1;
+    color: #ffffff;
+}
+
 .Welcome-text {
     background: linear-gradient( 0deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), linear-gradient(90.01deg, #e59cff 0.01%, #ba9cff 50.01%, #9cb2ff 100%);
     background-blend-mode: normal, screen;
