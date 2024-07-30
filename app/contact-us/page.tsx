@@ -11,7 +11,7 @@ export const metadata = {
 const ContactUs = () => {
   return (
     <>
-        <div className="flex flex-col items-center justify-center mt-20 py-10">
+        <div className="flex flex-col items-center justify-center mt- py-10">
         <div className="px-4 py-10 sm:px-8 md:px-20">
           <Image
             src="/cn.webp"

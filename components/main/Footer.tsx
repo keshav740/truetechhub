@@ -42,9 +42,9 @@ const Footer = () => {
               <Image
                 src="/logo.jpeg"
                 alt="logo"
-                width={100}
-                height={100}
-                className="cursor-pointer hover:animate-slowspin"
+                width={150}
+                height={150}
+                className="cursor-pointer hover:animate-slowspin rounded-full"
               />
             </Link>
             <p className="flex flex-row items-center my-[15px] cursor-pointer text-yellow-500">

@@ -1,7 +1,60 @@
+"use client"
+
 import Image from "next/image";
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+// Register the ScrollTrigger plugin with GSAP
+gsap.registerPlugin(ScrollTrigger);
 
 const SubService = () => {
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    const element = imageRef.current;
+
+    // GSAP animation for hover effect
+    gsap.to(element, {
+      duration: 1,
+      scale: 1.1,
+      rotation: 10, // Rotate by 10 degrees
+      ease: "power2.inOut",
+      paused: true,
+      yoyo: true,
+    });
+
+    const handleMouseEnter = () => {
+      gsap.to(element, { scale: 1.2, rotation: 30 }); // Increase scale and rotate by 20 degrees
+    };
+
+    const handleMouseLeave = () => {
+      gsap.to(element, { scale: 1, rotation: 0 }); // Reset scale and rotation
+    };
+
+    element.addEventListener("mouseenter", handleMouseEnter);
+    element.addEventListener("mouseleave", handleMouseLeave);
+
+    // Clean up event listeners on component unmount
+    return () => {
+      element.removeEventListener("mouseenter", handleMouseEnter);
+      element.removeEventListener("mouseleave", handleMouseLeave);
+    };
+  }, []);
+
+  useEffect(() => {
+    // GSAP ScrollTrigger animation
+    gsap.to(imageRef.current, {
+      rotation: 360, // Full rotation
+      scrollTrigger: {
+        trigger: imageRef.current,
+        start: "top center", // Animation starts when the top of the trigger hits the center of the viewport
+        end: "bottom top", // Animation ends when the bottom of the trigger hits the top of the viewport
+        scrub: true, // Link the animation to the scroll position
+      },
+    });
+  }, []);
+
   return (
     <>
       <div className="flex flex-col items-center justify-center pt-20">
@@ -48,12 +101,15 @@ const SubService = () => {
               partner, 24/7.
             </p>
           </div>
-          <div className="md:w-1/2 bg-gray-800 bg-opacity-50 p-8 rounded-lg shadow-lg max-w-md w-full">
+          <div 
+            className="md:w-1/2 bg-gray-800 bg-opacity-50 p-8 rounded-lg shadow-lg max-w-md w-full" 
+            ref={imageRef}
+          >
             <Image 
-            src="/about.jpg"
-            alt="About Image"
-            width={450}
-            height={600}
+              src="/about.jpg"
+              alt="About Image"
+              width={450}
+              height={600}
             />
           </div>
         </div>
