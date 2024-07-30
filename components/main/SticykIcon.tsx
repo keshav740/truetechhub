@@ -23,7 +23,7 @@ const StickyIcon = () => {
         </a>
       </p>
       <p className="flex flex-row items-center my-[15px] cursor-pointer text-blue-600 text-[26px]">
-        <a href="tel:+917497876899">
+        <a href="tel:+917505189143">
           <IoCall />
         </a>
       </p>
