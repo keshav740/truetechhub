@@ -27,7 +27,8 @@ const Background3D = () => {
   const imgRefs = useRef([]);
 
   useEffect(() => {
-    imgRefs.current.forEach((img, index) => {
+    imgRefs.current.forEach((img) => {
+      const size = Math.random() * 80 + 40; // Varying size for responsiveness
       gsap.fromTo(
         img,
         {
@@ -37,6 +38,8 @@ const Background3D = () => {
           rotationX: Math.random() * 360,
           rotationY: Math.random() * 360,
           rotationZ: Math.random() * 360,
+          width: size,
+          height: size,
         },
         {
           duration: 10,
@@ -55,33 +58,16 @@ const Background3D = () => {
   }, []);
 
   return (
-    <div className="background-container">
+    <div className="fixed top-0 left-0 w-full h-full overflow-hidden perspective-800 bg-gradient-to-r z-[-1]">
       {images.map((src, i) => (
         <img
           key={i}
           ref={(el) => (imgRefs.current[i] = el)}
           src={src}
-          className="image-item"
           alt={`Image ${i}`}
+          className="absolute object-cover rounded-lg shadow-lg"
         />
       ))}
-      <style jsx>{`
-        .background-container {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100vw;
-          height: 100vh;
-          overflow: hidden;
-          perspective: 800px;
-        }
-        .image-item {
-          position: absolute;
-          width: 100px;
-          height: 100px;
-          object-fit: cover;
-        }
-      `}</style>
     </div>
   );
 };
